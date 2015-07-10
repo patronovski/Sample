@@ -1,0 +1,63 @@
+<div class="page-title">
+
+    <div class="title-env">
+        <h1 class="title">Responsive Table</h1>
+        <p class="description">Dynamic table variants with pagination and other controls</p>
+    </div>
+</div>
+
+
+<!-- Basic Setup -->
+<div class="panel panel-default panel-shadow" cg-busy="{promise:savePromise,message:'Saving...'}">
+    <div class="panel-heading">
+        <h3 class="panel-title">Basic Setup</h3>
+        <a href="" class="btn btn-info" ng-click="save(true)" ng-disabled="myForm.$invalid" style="float:right; width:90px;">Save</a>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="btn-toolbar">
+
+        </div>
+
+        <form name="myForm" role="form" novalidate>
+            <table class="table table-small-font table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th style="width:25;">Name</th>
+                        <th style="width:25;">City</th>
+                        <th style="width:25;">Email</th>
+                        <th style="width:25;">Phone</th>
+                    </tr>
+                </thead>
+
+                <tbody class="middle-align">
+
+                    <tr dir-paginate="item in customers | itemsPerPage: 10"
+                        selection-model
+                        selection-model-type="checkbox"
+                        selection-model-mode="multiple-additive"
+                        selection-model-selected-attribute="selected"
+                        selection-model-selected-items="selectedItems"
+                        selection-model-on-change="test(item)"
+                        selection-model-cleanup-strategy="deselect">
+
+                        <td> {{item.name}} </td>
+                        <td> {{item.city}} </td>
+                        <td> {{item.email}} </td>
+                        <td> {{item.phone}} </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div >
+                <dir-pagination-controls style="float:right"></dir-pagination-controls>
+            </div>
+
+
+        </form>
+
+    </div>
+</div>

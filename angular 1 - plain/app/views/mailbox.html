@@ -1,0 +1,94 @@
+<div class="page-title">
+
+    <div class="title-env">
+        <h1 class="title">Mailbox</h1>
+        <p class="description">Mailbox sidebar and inbox messages</p>
+    </div>
+
+    <div class="breadcrumb-env">
+
+        <ol class="breadcrumb bc-1" >
+            <li>
+                <a href="dashboard-1.html"><i class="fa-home"></i>Home</a>
+            </li>
+            <li>
+
+                <a href="mailbox-main.html">Mailbox</a>
+            </li>
+            <li class="active">
+
+                <strong>Inbox</strong>
+            </li>
+        </ol>
+
+    </div>
+
+</div>
+
+
+<!-- Basic Setup -->
+<div class="panel panel-default panel-shadow" cg-busy="{promise:savePromise,message:'Saving...'}">
+    <div class="panel-heading">
+        <h3 class="panel-title">Basic Setup</h3>
+        <a href="" class="btn btn-info" ng-click="save(true)" ng-disabled="myForm.$invalid" style="float:right; width:90px;">Save</a>
+    </div>
+
+    <div class="panel-body">
+
+        <div class="btn-toolbar">
+
+        </div>
+
+        <!-- mail table -->
+        <table class="table">
+
+            <!-- mail table header -->
+            <thead>
+                <tr>
+                    <th style="width:40px;">
+                        <input type="checkbox" ng-model="selectedAll" ng-click="selectAll()"/>
+                    </th>
+                    <th style="width:20;"><strong>Van</strong></th>
+                    <th style="width:80;"><strong>Onderwerp</strong></th>
+                    <th style="width:40px;"><strong></strong></th>
+                    <th style="width:100px;"><strong>Tijd</strong></th>
+                </tr>
+            </thead>
+
+            <!-- email list -->
+            <tbody>
+
+                <!-- of via deze weg: ng-class="{ highlighted: item.selected }" -->
+                <tr ng-repeat="item in emails" style="cursor: pointer;" 
+                    selection-model
+                    selection-model-type="checkbox"
+                    selection-model-mode="multiple-additive"
+                    selection-model-selected-attribute="selected"
+                    selection-model-selected-class="highlighted"
+                    selection-model-selected-items="selectedItems"
+                    selection-model-on-change="test(item)"
+                    selection-model-cleanup-strategy="deselect">
+                    <td>
+                        <input type="checkbox"/>
+                    </td>
+                    <td>
+                        <a href="#">{{item.name}}</a>
+                    </td>
+                    <td>
+                        <a href="#">
+                            <span class="label label-danger">Business</span>
+                            {{item.message}}
+                        </a>
+                    </td>
+                    <td></td>
+                    <td>{{item.time}}</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+
+    </div>
+</div>

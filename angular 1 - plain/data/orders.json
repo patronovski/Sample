@@ -1,0 +1,38 @@
+[
+    {
+        "selected": true,
+        "name": "Weber Daniel",
+        "city": "Maxville",
+        "email": "weberdaniel@plasmosis.com",
+        "phone": "+1 (954) 541-2005"
+    },
+    {
+        "selected": false,
+        "name": "Hilda Cook",
+        "city": "Goldfield",
+        "email": "hildacook@plasmosis.com",
+        "phone": "+1 (848) 517-3615"
+    },
+    {
+        "selected": false,
+        "name": "Ernestine Dixon",
+        "city": "Muir",
+        "email": "ernestinedixon@plasmosis.com",
+        "phone": "+1 (996) 452-3245"
+    },
+    {
+        "selected": false,
+        "name": "Perkins Gutierrez",
+        "city": "Trinway",
+        "email": "perkinsgutierrez@plasmosis.com",
+        "phone": "+1 (902) 534-2100"
+    },
+    {
+        "selected": false,
+        "name": "Stout Blackwell",
+        "city": "Weeksville",
+        "email": "stoutblackwell@plasmosis.com",
+        "phone": "+1 (806) 535-2685"
+    }
+   
+]
