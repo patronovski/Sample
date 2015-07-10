@@ -13,8 +13,7 @@ var myApp = angular.module('myApp', [
     'angularUtils.directives.dirPagination',
     'selectionModel',
 ]);
-//sadassdfdsfsdf
-//asdasdasdasdd
+
 myApp.config(function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/home");
